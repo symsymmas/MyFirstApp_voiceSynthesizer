@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.0">
+  <CommandSet xml:lang="en-us" Name="MagicMemoEnu">
+    <!-- Command set for all US English commands-->
+    <CommandPrefix>Magic Memo</CommandPrefix>
+    <Example>Enter a new memo</Example>
+
+    <Command Name="newMemo">
+      <Example>Enter a new memo</Example>
+      <ListenFor>Enter [a] [new] memo</ListenFor>
+      <ListenFor>Make [a] [new] memo</ListenFor>
+      <ListenFor>Start [a] [new] memo</ListenFor>
+      <Feedback>Entering a new memo</Feedback>
+      <Navigate />
+      <!-- Navigation defaults to Main page -->
+    </Command>
+
+    <Command Name="showOne">
+      <Example>show memo number two</Example>
+      <ListenFor>show [me] memo [number] {num} </ListenFor>
+      <ListenFor>display memo [number] {num}</ListenFor>
+      <Feedback>Showing memo number {num}</Feedback>
+      <Navigate Target="/ViewMemos.xaml"/>
+    </Command>
+
+    <PhraseList Label="num">
+      <Item> 1 </Item>
+      <Item> 2 </Item>
+      <Item> 3 </Item>
+    </PhraseList>
+  </CommandSet>
+  <CommandSet xml:lang="fr-fr" Name="MagicMemoFr">
+    <!-- Command set for all France french commands-->
+    <CommandPrefix>Mémo magique</CommandPrefix>
+    <Example>Enregistrer un nouveau mémo.</Example>
+
+    <Command Name="newMemo">
+      <Example>Enregistrer un nouveau mémo</Example>
+      <!-- Different kinds to call the functionnality -->
+      <ListenFor>Enregistrer [un] [nouveau] mémo</ListenFor>
+      <ListenFor>Enregistrement [d'un] [nouveau] mémo</ListenFor>
+      <ListenFor>Nouveau mémo</ListenFor>
+      <ListenFor>Commencer [un] [nouveau] mémo</ListenFor>
+      <Feedback>Enregistrement du nouveau mémo</Feedback>
+      <Navigate />
+      <!-- Navigation defaults to Main page -->
+    </Command>
+
+    <Command Name="showOne">
+      <Example>Montrer le mémo numéro deux</Example>
+      <ListenFor>Montre[-moi] le mémo [numéro] {num}</ListenFor>
+      <ListenFor>Affiche[-moi] le mémo [numéro] {num}</ListenFor>
+      <Feedback>Montrer le mémo numéro {num}</Feedback>
+      <Navigate Target="/ViewMemos.xaml"/>
+    </Command>
+
+    <!-- To use it, keyboard: {Label} in "ListenFor". -->
+    <PhraseList Label="num">
+      <Item> 1 </Item>
+      <Item> 2 </Item>
+      <Item> 3 </Item>
+    </PhraseList>
+  </CommandSet>
+  <CommandSet xml:lang="ja-JP" Name="MagicMemoJa">
+    <!-- Command set for all Japanese commands -->
+    <CommandPrefix>マジック・メモ</CommandPrefix>
+    <Example>新規メモ</Example>
+
+    <Command Name="newMemo">
+      <Example>新規メモ</Example>
+      <ListenFor>新規メモ[を]</ListenFor>
+      <ListenFor>新しいメモ</ListenFor>
+      <Feedback>メモを言ってください</Feedback>
+      <Navigate/>
+    </Command>
+
+    <Command Name="showOne">
+      <Example>メモ１を表示</Example>
+      <ListenFor>メモ{num}を表示[してください] </ListenFor>
+      <Feedback>メモ{num}を表示します。 </Feedback>
+      <Navigate Target="/ViewMemos.xaml"/>
+    </Command>
+
+    <PhraseList Label="num">
+      <Item> 1 </Item>
+      <Item> 2 </Item>
+      <Item> 3 </Item>
+    </PhraseList>
+  </CommandSet>
+</VoiceCommands>
